@@ -1,0 +1,22 @@
+{
+  "order_id": "A20261010",
+  "order_date": "2026-10-29",
+  "customer": "王小明",
+  "items": [
+    {
+      "model": "CUP-350",
+      "name": "隨行保溫杯",
+      "color": "霧黑",
+      "quantity": 1,
+      "unit_price": 690
+    }
+  ],
+  "amount": 690,
+  "currency": "TWD",
+  "status": "處理中",
+  "carrier": null,
+  "tracking_no": null,
+  "shipped_date": null,
+  "estimated_delivery": null,
+  "refund_limit_note": "退款金額超過 NT$3,000 須由真人核准"
+}

@@ -1,0 +1,22 @@
+{
+  "order_id": "A20261008",
+  "order_date": "2026-10-27",
+  "customer": "李佳穎",
+  "items": [
+    {
+      "model": "CUP-480",
+      "name": "經典真空保溫杯",
+      "color": "霧黑",
+      "quantity": 2,
+      "unit_price": 890
+    }
+  ],
+  "amount": 1780,
+  "currency": "TWD",
+  "status": "配送中",
+  "carrier": "好速物流",
+  "tracking_no": "HS26102701",
+  "shipped_date": "2026-10-28",
+  "estimated_delivery": "2026-10-30",
+  "refund_limit_note": "退款金額超過 NT$3,000 須由真人核准"
+}

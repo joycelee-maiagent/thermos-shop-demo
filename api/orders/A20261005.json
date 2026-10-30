@@ -1,0 +1,22 @@
+{
+  "order_id": "A20261005",
+  "order_date": "2026-09-25",
+  "customer": "王小明",
+  "items": [
+    {
+      "model": "LID-01",
+      "name": "替換杯蓋 (三款通用)",
+      "color": "黑",
+      "quantity": 2,
+      "unit_price": 150
+    }
+  ],
+  "amount": 300,
+  "currency": "TWD",
+  "status": "已送達",
+  "carrier": "好速物流",
+  "tracking_no": "HS26092501",
+  "shipped_date": "2026-09-26",
+  "delivered_date": "2026-09-29",
+  "refund_limit_note": "退款金額超過 NT$3,000 須由真人核准"
+}

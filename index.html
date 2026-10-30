@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>好速物流｜貨件查詢</title><style>
+:root{--brand:#F26B1D;--ink:#222;--muted:#6b7280;--line:#e5e7eb;--bg:#fafafa}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg)}
+header{background:#fff;border-bottom:3px solid var(--brand)}
+.top{max-width:960px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:28px}
+.logo{font-weight:800;font-size:22px;color:var(--brand);letter-spacing:1px}.logo span{color:var(--ink)}
+nav a{color:var(--ink);text-decoration:none;margin-right:20px;font-size:15px}nav a.on{color:var(--brand);font-weight:700}
+.hero{background:linear-gradient(120deg,#F26B1D,#F9A03F);color:#fff}
+.hero .in{max-width:960px;margin:0 auto;padding:36px 16px}
+h1{margin:0 0 6px;font-size:28px}.hero p{margin:0 0 18px;opacity:.95}
+form{display:flex;gap:10px;flex-wrap:wrap}
+input{flex:1;min-width:240px;padding:12px 14px;border:0;border-radius:6px;font-size:17px}
+button{padding:12px 26px;border:0;border-radius:6px;background:#222;color:#fff;font-size:17px;font-weight:700;cursor:pointer}
+main{max-width:960px;margin:0 auto;padding:24px 16px 60px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+.hint{color:var(--muted)}
+.st{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:16px}.st div b{display:block;font-size:13px;color:var(--muted);font-weight:400}
+.badge{display:inline-block;background:#FFF1E8;color:var(--brand);font-weight:700;padding:2px 10px;border-radius:12px}
+ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+li{position:relative;padding:0 0 18px 20px}li:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#cbd5e1}
+li:first-child:before{background:var(--brand)}li time{color:var(--muted);font-size:14px;display:block}
+.err{color:#b91c1c}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:20px}
+</style></head><body>
+<header><div class="top"><div class="logo">好速<span>物流</span></div><nav><a class="on" href="#">貨件查詢</a><a href="#">寄件服務</a><a href="#">營業據點</a><a href="#">常見問題</a></nav></div></header>
+<section class="hero"><div class="in"><h1>貨件查詢</h1><p>請輸入物流單號 (例如 HS 開頭共 10 碼)</p>
+<form id="f"><input id="q" placeholder="請輸入物流單號" autocomplete="off"><button type="submit">查詢</button></form></div></section>
+<main><div class="card" id="r"><p class="hint">輸入單號後按「查詢」，即可看到貨件目前位置與配送進度。</p></div></main>
+<footer>本網站為 MaiAgent 教學示範用的虛構物流網站，資料皆為虛構。</footer>
+<script>
+const D={"HS26090301": {"status": "已送達", "events": [["2026-09-05 14:30", "已送達，由本人簽收", "收件地址"], ["2026-09-05 08:05", "配送中", "好速物流 配送站"], ["2026-09-04 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-09-04 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-09-05"}, "HS26090501": {"status": "已送達", "events": [["2026-09-09 14:30", "已送達，由本人簽收", "收件地址"], ["2026-09-09 08:05", "配送中", "好速物流 配送站"], ["2026-09-08 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-09-08 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-09-09"}, "HS26091201": {"status": "已送達", "events": [["2026-09-16 14:30", "已送達，由本人簽收", "收件地址"], ["2026-09-16 08:05", "配送中", "好速物流 配送站"], ["2026-09-15 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-09-15 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-09-16"}, "HS26091801": {"status": "已送達", "events": [["2026-09-22 14:30", "已送達，由本人簽收", "收件地址"], ["2026-09-22 08:05", "配送中", "好速物流 配送站"], ["2026-09-19 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-09-19 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-09-22"}, "HS26092501": {"status": "已送達", "events": [["2026-09-29 14:30", "已送達，由本人簽收", "收件地址"], ["2026-09-29 08:05", "配送中", "好速物流 配送站"], ["2026-09-26 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-09-26 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-09-29"}, "HS26100201": {"status": "已送達", "events": [["2026-10-06 14:30", "已送達，由本人簽收", "收件地址"], ["2026-10-06 08:05", "配送中", "好速物流 配送站"], ["2026-10-03 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-10-03 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-10-06"}, "HS26100801": {"status": "已送達", "events": [["2026-10-13 14:30", "已送達，由本人簽收", "收件地址"], ["2026-10-13 08:05", "配送中", "好速物流 配送站"], ["2026-10-09 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-10-09 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-10-13"}, "HS26102701": {"status": "配送中", "events": [["2026-10-30 08:05", "配送中", "好速物流 配送站"], ["2026-10-28 21:40", "轉運中", "好速物流 台中轉運中心"], ["2026-10-28 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-10-30"}, "HS26102801": {"status": "已交寄", "events": [["2026-10-29 09:12", "貨件已由寄件人交寄", "好速物流 台北轉運中心"]], "eta": "2026-10-31"}};
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();
+ const q=document.getElementById('q').value.trim().toUpperCase(),r=document.getElementById('r');
+ r.innerHTML='<p class="hint">查詢中…</p>';
+ setTimeout(()=>{const t=D[q];
+  if(!t){r.innerHTML='<p class="err">查無此單號，請確認後再試一次。</p>';return}
+  r.innerHTML='<div class="st"><div><b>物流單號</b>'+q+'</div><div><b>目前狀態</b><span class="badge">'+t.status+'</span></div><div><b>預計送達</b>'+(t.eta||'-')+'</div></div>'+
+   '<ol>'+t.events.map(e=>'<li><time>'+e[0]+'</time>'+e[1]+'・'+e[2]+'</li>').join('')+'</ol>';
+ },900);});
+</script></body></html>

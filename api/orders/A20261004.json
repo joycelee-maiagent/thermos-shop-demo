@@ -1,0 +1,22 @@
+{
+  "order_id": "A20261004",
+  "order_date": "2026-09-18",
+  "customer": "張雅婷",
+  "items": [
+    {
+      "model": "CUP-350",
+      "name": "隨行保溫杯",
+      "color": "櫻花粉",
+      "quantity": 3,
+      "unit_price": 690
+    }
+  ],
+  "amount": 2070,
+  "currency": "TWD",
+  "status": "已送達",
+  "carrier": "好速物流",
+  "tracking_no": "HS26091801",
+  "shipped_date": "2026-09-19",
+  "delivered_date": "2026-09-22",
+  "refund_limit_note": "退款金額超過 NT$3,000 須由真人核准"
+}
